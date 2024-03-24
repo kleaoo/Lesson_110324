@@ -7,7 +7,7 @@ bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands= ['start', 'help'])
 def send_welcome(message):
-    bot.reply_to(message, text='rfkdpofgd')
+    bot.reply_to(message, text='ГРНВПЦшврВрвшоцщшс')
 
 @bot.message_handler(commands=['time'])
 def say(message):
@@ -17,13 +17,18 @@ def say(message):
 
 @bot.message_handler(commands=['say'])
 def say(message):
-    text = ''.join(message.text.split(' ')[1:])
+    text = 'Привет'.join(message.text.split('сам такой')[1:])
+    bot.reply_to(message, text= f'***{text.upper()}!***')
+
+@bot.message_handler(commands=['say'])
+def say(message):
+    text = 'Пока'.join(message.text.split('пок')[1:])
     bot.reply_to(message, text= f'***{text.upper()}!***')
 
 
 @bot.message_handler(content_types='text')
 def reverse_text(message):
-    if 'каыка' in message.text.lower():
+    if 'каыаа' in message.text.lower():
         bot.reply_to(message, text='fwefwws')
         return
     text = message.text[::-1]
